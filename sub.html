@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="sub.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="typewriter">
+        <h1>Төрсөн өдрийн мэнд хүргэе!</h1>
+    </div>
+    <audio id="popSound" src="SoundLink"></audio>
+    <div class="card">
+    </div>
+    <div id="score">0</div>
+</body>
+<script src="background_animation.js"></script>
+<script src="card.js"></script>r
+<script>
+    // Check if device is in portrait mode
+    if (window.orientation === 0 || window.orientation === 180) {
+        // Show alert to rotate device
+        alert("Please rotate your device to landscape mode");
+
+        // Add event listener to check orientation change
+        window.addEventListener("orientationchange", function () {
+            if (window.orientation === 90 || window.orientation === -90) {
+                // Device is now in landscape mode, show content
+                document.body.style.display = "block";
+            }
+        });
+    } else {
+        // Device is already in landscape mode, show content
+        document.body.style.display = "block";
+    }
+</script>
+
+</html>
